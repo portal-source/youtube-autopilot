@@ -1,0 +1,44 @@
+{
+  "project": {
+    "name": "youtube-autopilot",
+    "version": "0.1.0",
+    "run_dir": "output",
+    "log_dir": "logs"
+  },
+  "script": {
+    "provider": "openai",
+    "model": "gpt-4o-mini",
+    "target_word_count": 900,
+    "tone": "documentary",
+    "scenes_per_minute": 6
+  },
+  "visuals": {
+    "image_source": "stable_diffusion",
+    "stable_diffusion_endpoint": "http://127.0.0.1:7860",
+    "fallback_source": "stock_api",
+    "stock_api_key": "YOUR_STOCK_API_KEY_HERE",
+    "resolution": "1920x1080",
+    "images_per_scene": 1
+  },
+  "audio": {
+    "tts_provider": "elevenlabs",
+    "voice_id": "YOUR_VOICE_ID_HERE",
+    "speaking_rate": 1.0,
+    "background_music": false,
+    "music_volume_db": -22
+  },
+  "assembly": {
+    "fps": 30,
+    "transition": "crossfade",
+    "transition_seconds": 0.5,
+    "output_format": "mp4",
+    "output_codec": "libx264"
+  },
+  "youtube": {
+    "client_secrets_file": "config/client_secret.json",
+    "privacy_status": "private",
+    "category_id": "27",
+    "default_tags": ["automation", "ai", "explainer"]
+  },
+  "secrets_note": "Real API keys belong in a .env file, not here. This file is a non-sensitive template."
+}

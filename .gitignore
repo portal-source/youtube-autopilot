@@ -1,0 +1,46 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Environment variables & secrets
+.env
+.env.*
+config/settings.local.json
+config/client_secret.json
+*.pem
+
+# Pipeline artifacts (keep the folders, ignore their contents)
+output/*
+!output/.gitkeep
+logs/*
+!logs/.gitkeep
+
+# Media scratch files
+*.mp4
+*.wav
+*.mp3
+*.tmp
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Testing / coverage
+.pytest_cache/
+.coverage
+htmlcov/
